@@ -18,8 +18,12 @@ Plug 'othree/yajs.vim'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'mxw/vim-jsx'
 Plug 'Raimondi/delimitMate'
+Plug 'tomasiser/vim-code-dark'
 
 call plug#end()
+
+set t_Co=256
+colorscheme codedark
 
 let g:prettier#quickfix_enabled = 0
 
