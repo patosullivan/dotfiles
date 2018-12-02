@@ -1,5 +1,6 @@
 set shell=/bin/bash
 set backspace=indent,eol,start
+set ff=unix
 
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -19,6 +20,8 @@ Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'mxw/vim-jsx'
 Plug 'Raimondi/delimitMate'
 Plug 'tomasiser/vim-code-dark'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
@@ -33,3 +36,5 @@ autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.
 let g:prettier#config#semi = 'false'
 let g:prettier#config#single_quote = 'false'
 let g:prettier#config#trailing_comma = 'none'
+
+let g:airline#extensions#tabline#enabled = 1
