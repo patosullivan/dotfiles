@@ -1,6 +1,9 @@
 set shell=/bin/bash
 set backspace=indent,eol,start
 set ff=unix
+set expandtab
+set shiftwidth=2
+set softtabstop=2
 
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
