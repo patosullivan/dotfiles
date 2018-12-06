@@ -80,6 +80,10 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  npm
+  node
+  docker
+  git-extras
 )
 
 source $ZSH/oh-my-zsh.sh
