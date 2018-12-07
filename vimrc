@@ -26,6 +26,7 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
