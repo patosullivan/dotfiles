@@ -84,6 +84,7 @@ plugins=(
   npm
   node
   docker
+  zsh-nvm
   git-extras
 )
 
