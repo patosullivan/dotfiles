@@ -4,6 +4,7 @@ set ff=unix
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+set splitbelow splitright
 
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
