@@ -1,4 +1,4 @@
-
+export ANDROID_SDK=/Users/myuser/Library/Android/sdk
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export BROWSER=w3m
 export NVM_DIR="$HOME/.nvm"
