@@ -28,6 +28,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+Plug 'jreybert/vimagit'
 
 call plug#end()
 
