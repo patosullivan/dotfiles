@@ -10,7 +10,7 @@ set number relativenumber
 let mapleader = ","
 nnoremap <leader>a :Ack <Space>
 nnoremap <leader>M :Magit
-nnoremap <leader>gp :! git push
+nnoremap <leader>gp :! git push<cr>
 
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
