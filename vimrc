@@ -8,7 +8,7 @@ set splitbelow splitright
 set number relativenumber
 
 let mapleader = ","
-nnoremap <leader>a :Ack
+nnoremap <leader>a :Ack <Space>
 nnoremap <leader>M :Magit
 
 if empty(glob('~/.vim/autoload/plug.vim'))
