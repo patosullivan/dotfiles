@@ -36,10 +36,10 @@ call plug#end()
 set t_Co=256
 colorscheme codedark
 
-let g:prettier#quickfix_enabled = 0
+" let g:prettier#quickfix_enabled = 0
 
 let g:prettier#autoformat = 0
-autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
 
 let g:prettier#config#semi = 'false'
 let g:prettier#config#single_quote = 'false'
