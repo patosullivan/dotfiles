@@ -5,6 +5,11 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set splitbelow splitright
+set number relativenumber
+
+let mapleader = ","
+nnoremap <leader>a :Ack
+nnoremap <leader>M :Magit
 
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -30,8 +35,13 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'jreybert/vimagit'
+Plug 'mileszs/ack.vim'
 
 call plug#end()
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 set t_Co=256
 colorscheme codedark
