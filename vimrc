@@ -62,3 +62,4 @@ let g:prettier#config#parser = 'babylon'
 let g:prettier#config#arrow_parens = 'avoid'
 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
