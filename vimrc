@@ -37,6 +37,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'jreybert/vimagit'
 Plug 'mileszs/ack.vim'
+Plug 'posva/vim-vue'
 
 call plug#end()
 
