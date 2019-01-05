@@ -9,7 +9,7 @@ set number relativenumber
 
 let mapleader = ","
 nnoremap <leader>a :Ack <Space>
-nnoremap <leader>M :Magit
+nnoremap <leader>M :Magit <cr>
 nnoremap <leader>gp :! git push<cr>
 
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -38,6 +38,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'jreybert/vimagit'
 Plug 'mileszs/ack.vim'
 Plug 'posva/vim-vue'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
