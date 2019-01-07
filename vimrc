@@ -6,6 +6,7 @@ set shiftwidth=2
 set softtabstop=2
 set splitbelow splitright
 set number relativenumber
+set spell spelllang=en_us
 
 let mapleader = ","
 nnoremap <leader>a :Ack <Space>
