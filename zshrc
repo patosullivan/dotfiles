@@ -1,6 +1,6 @@
 export BROWSER="w3m"
 export EDITOR="vim"
-export TERM="tmux-256color"
+export TERM="xterm-256color"
 function powerline_precmd() {
     PS1="$(powerline-shell --shell zsh $?)"
   }
@@ -124,3 +124,5 @@ source $ZSH/oh-my-zsh.sh
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="/usr/local/sbin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
