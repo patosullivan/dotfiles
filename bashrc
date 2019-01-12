@@ -7,3 +7,5 @@ export NVM_DIR="$HOME/.nvm"
 if [ -f $(brew --prefix)/opt/mcfly/mcfly.bash ]; then
   . $(brew --prefix)/opt/mcfly/mcfly.bash
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
