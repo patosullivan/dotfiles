@@ -1,19 +1,15 @@
 #!/bin/bash
-dir=~/dotfiles
-olddir=~/dotfiles_old
-files="bashrc zshrc vimrc tmux.conf"    
-
-echo "Creating $olddir for backup of any existing dotfiles in ~"
-mkdir -p $olddir
-echo "...done"
-
-echo "Changing to the $dir directory"
-cd $dir
-echo "...done"
+home=/home/patrick
+dotDir=$home/dotfiles
+files="bash zsh vim tmux"    
+folders=""
 
 for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-        mv ~/.$file ~/dotfiles_old/
-    echo "Creating symlink to $file in home directory."
-        ln -s $dir/$file ~/.$file
+    echo "Creating symlink to $file in $home"
+    stow -t $home $file 
+done
+
+for folder in $folders; do
+  echo "Creating symlink to $folder folder in $home"
+  stow -t $home $folder
 done
