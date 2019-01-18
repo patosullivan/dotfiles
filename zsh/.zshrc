@@ -1,5 +1,6 @@
 #export BROWSER="w3m"
 #export EDITOR="vim"
+export FZF_DEFAULT_COMMAND="rg --files --no-ignore --hidden"
 export TERM="xterm-256color"
 bindkey -v
 function powerline_precmd() {
