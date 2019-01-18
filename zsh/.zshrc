@@ -3,6 +3,7 @@ alias gp="git push"
 alias gc="git commit"
 alias gca="git commit -a"
 alias gs="git status"
+alias gf="git fetch"
 
 #export BROWSER="w3m"
 #export EDITOR="vim"
