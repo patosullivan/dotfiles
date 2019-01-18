@@ -1,3 +1,9 @@
+#aliases
+alias gp="git push"
+alias gc="git commit"
+alias gca="git commit -a"
+alias gs="git status"
+
 #export BROWSER="w3m"
 #export EDITOR="vim"
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore --hidden"
