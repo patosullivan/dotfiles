@@ -419,5 +419,5 @@ bindsym XF86WLAN		exec $netrefresh
 exec --no-startup-id lukescripts
 exec xss-lock -- i3lock -e -f -c 000000 -i /tmp/locked.png
 exec auto-xflux
-
+exec --no-startup-id /usr/lib/kdeconnectd
 
