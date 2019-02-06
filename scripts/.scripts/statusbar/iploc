@@ -1,0 +1,7 @@
+#!/bin/bash
+
+ipaddr=$(curl -s "icanhazip.com")
+
+resp=$(curl "http://api.ipstack.com/${ipaddr}?access_key=2ad576449ab36b0ca9eb0d3ee9b5e292&format=1" 2> /dev/null)
+echo "$(echo -n $resp | jq -r .city), $(echo -n $resp | jq -r .region_code)"
+
