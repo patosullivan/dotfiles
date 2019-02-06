@@ -3,3 +3,4 @@ irssi/
 *.swp
 gnupg/
 vim/.vim/plugged
+backup
