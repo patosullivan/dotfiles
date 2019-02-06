@@ -26,9 +26,9 @@ signal=8
 interval=20
 signal=7
 
-[weather]
-interval=3600
-signal=5
+#[weather]
+#interval=3600
+#signal=5
 
 [mailbox]
 label=📬
@@ -56,7 +56,7 @@ command=disk /
 #command=disk /home 🏠
 
 [ipaddr]
-label= 
+label=🌐
 command=ipaddr
 color=#00FF00
 interval=30
