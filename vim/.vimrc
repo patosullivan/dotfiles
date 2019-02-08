@@ -40,6 +40,7 @@ Plug 'jreybert/vimagit'
 Plug 'mileszs/ack.vim'
 Plug 'posva/vim-vue'
 Plug 'airblade/vim-gitgutter'
+Plug 'elixir-editors/vim-elixir'
 
 call plug#end()
 
