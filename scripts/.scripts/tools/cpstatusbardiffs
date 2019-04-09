@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for var in battery clock cpu disk help internet mailbox memory mpdupdate music news pacpackages popupgrade torrent volume weather
+do
+  cp "/home/patrick/voidrice/.scripts/statusbar/$var" "/home/patrick/.scripts/statusbar/$var"
+done

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for var in compiler ifinstalled linkhandler queueandnotify remaps setbg shortcuts texclear transadd
+do
+  cp "/home/patrick/voidrice/.scripts/tools/$var" "/home/patrick/.scripts/tools/$var"
+done

@@ -1,0 +1,4 @@
+#! /bin/bash
+
+diff --suppress-common-lines /home/patrick/voidrice/$1 /home/patrick/$1 | less
+
