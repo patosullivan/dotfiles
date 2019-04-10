@@ -1,13 +1,8 @@
-#aliases
-alias gp="git push"
-alias gc="git commit"
-alias gca="git commit -a"
-alias gs="git status"
-alias gf="git fetch"
 
-#export BROWSER="w3m"
-#export EDITOR="vim"
-export FZF_DEFAULT_COMMAND="rg --files --no-ignore --hidden"
+[ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc" # Load shortcut aliases
+[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+
+export FZF_DEFAULT_COMMAND="rg --files --hidden"
 export TERM="xterm-256color"
 bindkey -v
 function powerline_precmd() {
