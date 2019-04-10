@@ -3,10 +3,10 @@ map gh :cd ~/<CR>
 map th <tab>:cd ~/<CR><tab>
 map Mh <tab>:cd ~/<CR><tab>:mo<CR>
 map Yh <tab>:cd ~/<CR><tab>:co<CR>
-map gd :cd ~/Documents<CR>
-map td <tab>:cd ~/Documents<CR><tab>
-map Md <tab>:cd ~/Documents<CR><tab>:mo<CR>
-map Yd <tab>:cd ~/Documents<CR><tab>:co<CR>
+map gd :cd ~/dotfiles/<CR>
+map td <tab>:cd ~/dotfiles/<CR><tab>
+map Md <tab>:cd ~/dotfiles/<CR><tab>:mo<CR>
+map Yd <tab>:cd ~/dotfiles/<CR><tab>:co<CR>
 map gD :cd ~/Downloads<CR>
 map tD <tab>:cd ~/Downloads<CR><tab>
 map MD <tab>:cd ~/Downloads<CR><tab>:mo<CR>
@@ -35,6 +35,10 @@ map gmn :cd /mnt<CR>
 map tmn <tab>:cd /mnt<CR><tab>
 map Mmn <tab>:cd /mnt<CR><tab>:mo<CR>
 map Ymn <tab>:cd /mnt<CR><tab>:co<CR>
+map gs :cd ~/Sync<CR>
+map ts <tab>:cd ~/Sync<CR><tab>
+map Ms <tab>:cd ~/Sync<CR><tab>:mo<CR>
+map Ys <tab>:cd ~/Sync<CR><tab>:co<CR>
 map bf :e ~/.config/bmfiles<CR>
 map bd :e ~/.config/bmdirs<CR>
 map cfb :e ~/.bashrc<CR>

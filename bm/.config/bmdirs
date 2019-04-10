@@ -1,6 +1,6 @@
 # You can add comments to these files with #
 h	~/
-d	~/Documents
+d	~/dotfiles
 D	~/Downloads
 m	~/Music
 pp	~/Pictures
@@ -8,3 +8,4 @@ vv	~/Videos
 cf	~/.config
 sc	~/.scripts
 mn	/mnt
+s       ~/Sync
