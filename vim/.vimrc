@@ -1,4 +1,4 @@
-set shell=/bin/bash
+set shell=/bin/zsh
 set backspace=indent,eol,start
 set ff=unix
 set expandtab
@@ -41,6 +41,7 @@ Plug 'mileszs/ack.vim'
 Plug 'posva/vim-vue'
 Plug 'airblade/vim-gitgutter'
 Plug 'elixir-editors/vim-elixir'
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
@@ -66,3 +67,4 @@ let g:prettier#config#arrow_parens = 'avoid'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:vimwiki_list = [{'path': '~/vimwiki/','syntax': 'markdown', 'ext': '.md'}]
