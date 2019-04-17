@@ -1,4 +1,5 @@
 # vim: filetype=i3
+# File originally by Luke Smith <https://lukesmith.xyz>
 
 # This config file will use environmental variables such as $BROWSER and $TERMINAL.
 # You can set these variables in ~/.profile or ~/.bash_profile if you have it as below:
@@ -7,7 +8,6 @@
 # export TERMINAL="st"
 
 # #---Basic Definitions---# #
-# Needed for i3-gaps
 for_window [class="^.*"] border pixel 2
 gaps inner 15
 gaps outer 2
@@ -20,7 +20,6 @@ set $netrefresh --no-startup-id sudo -A systemctl restart NetworkManager
 set $hibernate sudo -A systemctl suspend
 
 # #---Dropdown Windows---# #
-
 # General dropdown window traits. The order can matter.
 for_window [instance="dropdown_*"] floating enable
 for_window [instance="dropdown_*"] move scratchpad
@@ -44,11 +43,11 @@ exec --no-startup-id remaps
 # Unclutter makes the mouse invisible after a brief period
 exec --no-startup-id unclutter
 # Run the script to update the mpd i3block on change.
-exec_always --no-startup-id mpdupdate
+#exec_always --no-startup-id mpdupdate
 # mpd startup
-exec --no-startup-id mpd
+#exec --no-startup-id mpd
 # Podboat automatic queue and download
-exec_always --no-startup-id podentr
+# exec_always --no-startup-id podentr
 
 # Set Xresources colors:
 set_from_resource $darkblack	color0  #000000
@@ -255,8 +254,6 @@ bindsym $mod+Shift+0	move container to workspace $ws10
 
 for_window [class="Pinentry"] sticky enable
 for_window [class="sent"] border pixel 0px
-for_window [class="Blender"] move to workspace $ws6
-for_window [class="marble"] move to workspace $ws7
 for_window [title="GIMP Startup"] move workspace $ws5
 for_window [class="Gimp"] move workspace $ws5
 for_window [window_role="GtkFileChooserDialog"] move position center
@@ -272,7 +269,7 @@ for_window [title="mpvfloat"] border pixel 0
 no_focus [title="mpvfloat"]
 
 # #---Function Buttons---# #
-bindsym $mod+F1		exec --no-startup-id groff -kejpt -mom ~/.readme.mom -Tpdf | zathura -
+bindsym $mod+F1		exec --no-startup-id groff -mom ~/.local/share/larbs/readme.mom -Tpdf | zathura -
 bindsym $mod+F2		restart
 bindsym $mod+F3		exec --no-startup-id displayselect
 bindsym $mod+F4		exec --no-startup-id prompt "Hibernate computer?" "$hibernate"
@@ -296,7 +293,6 @@ bindsym $mod+Shift+Up		move up
 bindsym $mod+Shift+Right 	move right
 
 # #---Media Keys---# #
-
 # Volume keys
 bindsym $mod+plus		exec --no-startup-id lmc up 5
 bindsym $mod+Shift+plus		exec --no-startup-id lmc up 15
@@ -322,7 +318,6 @@ bindsym $mod+Delete		exec $stoprec
 bindsym XF86Launch1		exec --no-startup-id xset dpms force off
 
 # #---Extra XF86 Keys---# #
-# These are the extra media keys that some keyboards have.
 bindsym XF86AudioMute		exec --no-startup-id lmc mute
 bindsym XF86AudioLowerVolume	exec --no-startup-id lmc down 5
 bindsym Shift+XF86AudioLowerVolume	exec --no-startup-id lmc down 10
