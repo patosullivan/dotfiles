@@ -142,7 +142,7 @@ bindsym $mod+Shift+i		exec --no-startup-id i3resize up
 bindsym $mod+o			sticky toggle
 bindsym $mod+Shift+o		exec --no-startup-id i3resize right
 
-bindsym $mod+p			exec --no-startup-id lmc toggle
+bindsym $mod+p			exec --no-startup-id bitwarden-bin
 bindsym $mod+Shift+p		exec --no-startup-id lmc pause
 
 bindsym $mod+a			exec --no-startup-id ddspawn dropdowncalc -f mono:pixelsize=24
