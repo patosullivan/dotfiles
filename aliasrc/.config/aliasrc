@@ -36,3 +36,105 @@ alias ka="killall" \
 	ffmpeg="ffmpeg -hide_banner"
 
 vf() { fzf | xargs -r -I % $EDITOR % ;}
+
+# DB Stuff
+# --------
+# PG
+alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pgtail='tail -f /usr/local/var/postgres/server.log'
+alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+# MySQL
+alias mysqlstart='mysql.server start'
+alias mysqlstop='mysql.server stop'
+# Both
+alias startdbs='pgstart;mysqlstart'
+alias stopdbs='pgstop;mysqlstop'
+alias restartdbs='stopdbs;startdbs'
+alias redis='redis-server /usr/local/etc/redis.conf'
+
+# System Level
+# ------------
+alias uldb='sudo /usr/libexec/locate.updatedb' #update the location database
+alias flush_dns='sudo killall -HUP mDNSResponder'
+alias fixbrew='sudo chown -R `whoami` /usr/local'
+alias c='clear'
+alias clera='clear'
+alias rm_sym='find . ! -name . -prune -type l | xargs rm'
+alias fixcam='sudo killall VDCAssistant'
+alias fixterm='stty sane'
+
+# Git
+# -----------------
+alias gboom='git add -A; git commit -m "Boom"; git push;'
+alias gg='git goggles'
+alias gwc='git whatchanged --no-merges --pretty=format:"%Cgreen%h%Creset%x09%an%x09%Cblue%ar%Creset%x09%s"'
+alias gt='git tag'
+alias gtl='git tag -l'
+alias gtlr='git ls-remote --tags'
+alias gbm='git branch --merged'
+alias gbnm='git branch --no-merged'
+alias co_remote='~/.dotfiles/scripts/git_goggles_ruby_checkout.rb'
+alias prune_merged='~/.dotfiles/scripts/git_goggles_prune_merged.rb'
+alias ptl='bundle exec rake pt:list'
+alias ptc='cat /rails/bolstr/bolstr/doc/current_pt_story.txt'
+alias gmnff='git merge --no-edit --no-ff $*'
+alias mmts='git checkout staging; git merge --no-edit --no-ff master; git push; git push --tags'
+alias mmtp='git checkout production; git merge --no-edit --no-ff master; git push; git push --tags'
+alias mmte='mmts;mmtp'
+alias gbc='git rev-parse --abbrev-ref HEAD 2>/dev/null | cut -d"/" -f 2 | tr -d "\n" | pbcopy' # copies the current branch to your clipboard (on os x)
+alias gs='git stash'
+alias gsp='git stash pop'
+alias zff='zenflow feature finish'
+alias dev='git checkout development'
+alias sta='git checkout staging'
+alias prd='git checkout production'
+alias mas='git checkout master'
+alias gauthor='f() { GIT_COMMITTER_DATE=$1 git commit --amend --date=$1 }; f' # Wed Mar 14 14:08 2018 -0600
+
+
+# Nocorrect Aliases
+# -----------------
+unsetopt correct_all
+
+# Apps
+# ----
+alias tl='tmux ls'
+alias ta='tmux attach -t $*'
+alias tk='tmux kill-session -t $*'
+alias tks='tmux kill-server'
+alias to='tmuxinator open $*'
+alias ts='tmuxinator start $@'
+alias ml='tmuxinator list'
+
+# Wemux
+# -----
+alias wl='wemux list'
+alias wj='wemux join $*'
+alias wr='wemux rogue $*'
+alias wp='wemux pair $*'
+alias wsj='f() { wemux join $1; wemux start }; f'
+alias wk='wemux stop $*'
+alias wks='wemux stop'
+
+# VIM
+# ---
+alias vim='nvim'
+alias vbi='vim +BundleInstall +qall'
+alias vpe='vim ~/.vim/plugins.vim'
+alias vbc='vim +BundleClean +qall'
+alias vim_huge='vim -u NONE -U NONE -N $*'
+
+# RAILS
+# -----
+# you need to use bundle exec before each command you run in a app controled by
+# bundler so this alias helps make that easier
+alias b='bundle exec $*'
+alias rdm='bin/rake db:migrate'
+alias rc='bin/rails console'
+alias rdbc='bin/rails dbconsole'
+alias kr='kill -9 `cat tmp/pids/server.pid; echo;`'
+
+# NODE
+# ----
+alias nombomb='trash node_modules; bower cache clean && trash bower_components'
+
