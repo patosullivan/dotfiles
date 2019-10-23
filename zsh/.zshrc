@@ -135,7 +135,6 @@ export PATH="/usr/local/sbin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export HOMEBREW_GITHUB_API_TOKEN=c091721e4a6a52d33131872205a22b6700d6d7f0
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
