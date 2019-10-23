@@ -2,8 +2,6 @@
 [ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc" # Load shortcut aliases
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 export FZF_DEFAULT_COMMAND="rg --files --hidden"
 export TERM="xterm-256color"
 bindkey -v
@@ -88,11 +86,15 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  osx
+  brew
   git
   npm
   node
   docker
   git-extras
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -131,6 +133,16 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export PATH="/usr/local/sbin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export HOMEBREW_GITHUB_API_TOKEN=c091721e4a6a52d33131872205a22b6700d6d7f0
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/patrick/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/patrick/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/patrick/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/patrick/google-cloud-sdk/completion.zsh.inc'; fi
 
 . $HOME/.asdf/asdf.sh
 
