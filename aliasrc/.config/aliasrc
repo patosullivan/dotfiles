@@ -6,6 +6,7 @@ alias gc="git commit"
 alias gca="git commit -a"
 alias gs="git status"
 alias gf="git fetch"
+alias vi="nvim"
 
 #aliases from luke
 alias ka="killall" \
@@ -37,6 +38,7 @@ alias ka="killall" \
 
 vf() { fzf | xargs -r -I % $EDITOR % ;}
 
+# aliases from Jon
 # DB Stuff
 # --------
 # PG
