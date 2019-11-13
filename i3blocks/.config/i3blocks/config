@@ -51,9 +51,9 @@ signal=10
 interval=60
 command=disk /
 
-#[disk]
-#interval=60
-#command=disk /home 🏠
+[disk]
+interval=60
+command=disk /mnt/external
 
 [ipaddr]
 label=🌐
@@ -61,11 +61,11 @@ command=ipaddr
 color=#00FF00
 interval=30
 
-[iploc]
-label=🌎
-command=iploc
-color=#0000FF
-interval=30
+#[iploc]
+#label=🌎
+#command=iploc
+#color=#0000FF
+#interval=30
 
 [battery]
 command=battery BAT0
